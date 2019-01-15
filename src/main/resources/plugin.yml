@@ -1,0 +1,29 @@
+name: ShakeMyHeadSetter
+version: ${project.version}
+main: org.thane.ShakeMyHeadSetter
+api-version: 1.13
+authors: [Thane]
+description: Easily set skulls in your world!
+commands:
+  saveCache:
+    usage: /saveCache [true|false]
+    description: saves the skin cache to file. Include a boolean value to save with or without prettyprinting, to override the default set in the config.
+    permission: smh.save
+  registerFile:
+    aliases: [cacheFile]
+    usage: /registerFile <relative path> [true|false]
+    description: uploads and caches the selected png image via a relative path from the SMH data folder, under the name of the file, along with a boolean value to override an already existing item.
+    permission: smh.register.file
+  registerURL:
+    aliases: [cacheURL]
+    usage: /registerURL <URL> [true|false]
+    description: caches the selected url for a png image, along with a boolean value to override an already existing item.
+    permission: smh.register.url
+  getHead:
+    usage: /getHead <name>
+    description: gives the player the selected head item.
+    permission: smh.supply.item
+  getWand:
+    usage: /getWand <name>
+    description: transforms a placed playerhead into the desired head.
+    permission: smh.supply.set
